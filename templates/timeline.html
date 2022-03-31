@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block page_content %}
+    <h1 align="center" >TIMELINE</h1>
+    {%  for message in timeline %}
+    <div style="text-align: center;">
+        <h3><p>{{ message['title'] }}</p></h3>
+	    <p>{{ message['message'] }}</p>
+        <br>
+    </div>
+{% endfor %}
+
+{% endblock %}
